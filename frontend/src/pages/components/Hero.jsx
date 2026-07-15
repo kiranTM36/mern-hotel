@@ -1,5 +1,6 @@
 import React from 'react'
 import sunsetImg from './../../assets/sunset.webp'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -26,9 +27,10 @@ const Hero = () => {
           </p>
 
           <div className="flex gap-5">
+            <Link to='/rooms'>
             <button className="rounded-md bg-white px-8 py-3 font-semibold text-[#352F2F] shadow-lg transition-all duration-300 hover:scale-105 hover:bg-gray-200">
               View Rooms
-            </button>
+            </button></Link>
 
             <button className="rounded-md border-2 border-white bg-white/10 px-8 py-3 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white hover:text-[#352F2F]">
               Book Now

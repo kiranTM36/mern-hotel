@@ -1,123 +1,82 @@
 import React from "react";
-import RoomPic from "./../../assets/R.avif";
-import {
-  Users,
-  BedDouble,
-  Bath,
-  Wifi,
-  Tv,
-  CheckCircle,
-} from "lucide-react";
+import RoomPic from "../../assets/R.avif";
+import { Users, BedDouble, Wifi } from "lucide-react";
 
 const Card = () => {
   return (
-    <div className="group flex h-[230px] w-full overflow-hidden rounded-2xl border border-gray-200 bg-white p-3 shadow-sm transition-all duration-300 hover:shadow-xl">
+    <div className="group flex h-44 overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg">
 
-      {/* Room Image */}
-      <div className="relative h-full w-[35%] overflow-hidden rounded-xl">
-        <img
-          src={RoomPic}
-          alt="room"
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
-        />
+      {/* Image */}
+      <img
+        src={RoomPic}
+        alt="Room"
+        className="w-64 object-cover transition duration-500 group-hover:scale-105"
+      />
 
-        <span className="absolute left-3 top-3 rounded-full bg-green-600 px-3 py-1 text-xs font-semibold text-white">
-          Available
-        </span>
-      </div>
-
-
-      {/* Room Details */}
-      <div className="flex flex-1 flex-col justify-between px-5 py-2">
+      {/* Content */}
+      <div className="flex flex-1 flex-col justify-between p-5">
 
         {/* Top */}
-        <div>
-          <div className="flex justify-between">
+        <div className="flex justify-between">
 
-            <div>
-              <h2 className="text-xl font-bold text-gray-800">
-                Deluxe King Room
-              </h2>
+          <div>
+            <h2 className="text-xl font-semibold text-[#352F2F]">
+              Deluxe Room
+            </h2>
 
-              <p className="mt-1 text-sm text-gray-500">
-                Spacious room with modern facilities
-              </p>
-            </div>
-
-
-            <div className="text-right">
-              <p className="text-sm text-gray-500">
-                Per Night
-              </p>
-
-              <h3 className="text-2xl font-bold text-blue-600">
-                Rs. 2500
-              </h3>
-            </div>
-
+            <p className="mt-1 text-sm text-gray-500">
+              Room #204
+            </p>
           </div>
 
+          <div className="text-right">
+            <h2 className="text-2xl font-bold text-[#352F2F]">
+              Rs.2500
+            </h2>
 
-          {/* Room Features */}
-          <div className="mt-5 flex flex-wrap gap-3">
-
-            <span className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-sm">
-              <Users size={16}/>
-              2 Guests
-            </span>
-
-
-            <span className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-sm">
-              <BedDouble size={16}/>
-              King Bed
-            </span>
-
-
-            <span className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-sm">
-              <Bath size={16}/>
-              Bathroom
-            </span>
-
-
-            <span className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-sm">
-              <Wifi size={16}/>
-              WiFi
-            </span>
-
-
-            <span className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-sm">
-              <Tv size={16}/>
-              TV
-            </span>
-
-          </div>
-
-
-          {/* Facilities */}
-          <div className="mt-4 flex items-center gap-2 text-sm text-green-600">
-            <CheckCircle size={17}/>
-            Free cancellation available
+            <p className="text-xs text-gray-500">
+              per night
+            </p>
           </div>
 
         </div>
 
+        {/* Features */}
 
-        {/* Bottom Button */}
-        <div className="flex items-center justify-between border-t pt-3">
+        <div className="flex gap-5 text-sm text-gray-600">
 
-          <p className="text-sm text-gray-500">
-            Room No: 204
-          </p>
+          <div className="flex items-center gap-1">
+            <Users size={16} />
+            2 Guests
+          </div>
 
+          <div className="flex items-center gap-1">
+            <BedDouble size={16} />
+            King Bed
+          </div>
 
-          <button className="rounded-xl bg-blue-600 px-6 py-2.5 font-medium text-white transition hover:bg-blue-700">
+          <div className="flex items-center gap-1">
+            <Wifi size={16} />
+            WiFi
+          </div>
+
+        </div>
+
+        {/* Bottom */}
+
+        <div className="flex items-center justify-between">
+
+          <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-700">
+            Available
+          </span>
+
+          <button className="rounded-lg bg-[#352F2F] px-5 py-2 text-sm font-medium text-white transition hover:bg-[#4A3F35]">
             Book Now
           </button>
 
         </div>
 
       </div>
-
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Hero from './components/Hero'
 
 const Home = () => {
   return (
-    <div className='flex flex-col h-[200vh] box-border'>
+    <div className='flex flex-col h-full box-border'>
         <Navbar />
         <Hero />
     </div>
