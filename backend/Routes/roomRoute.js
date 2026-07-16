@@ -37,4 +37,53 @@ router.post('/create' ,multer.single('image'), async(req, res)=> {
     }
 })
 
+router.get('filter/:status', async(req, res)=>{
+    try {
+        const response = await roomModel.find({status : req.params.status})
+
+        res.status(200).json({
+            message : `List of ${req.params.status} Rooms`,
+            response
+        })
+
+    } catch (error) {
+        console.error(error);
+
+        res.status(500).json({
+            success: false,
+            message: "Failed to Filter room",
+            error: error.message,
+        });
+    }
+})
+
+router.get('/search/:roomNo', async(req, res)=> {
+    try {
+        const resposne = await roomModel.findOne({roomNo : req.params.roomNo})
+
+        if(!resposne){
+            return res.status(404).json({
+                sucess : false,
+                message : "Search room Number is not in List",
+                resposne
+            })
+        }
+
+        res.status(200).json({
+                sucess : false,
+                message : "Search room Number is not in List",
+                resposne
+        })
+    } catch (error) {
+        console.error(error);
+
+        res.status(500).json({
+            success: false,
+            message: "server Error",
+            error: error.message,
+        });
+    }
+})
+
+
 module.exports = router
