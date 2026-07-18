@@ -8,12 +8,12 @@ const Navbar = () => {
 
         <div className="flex gap-5">
                     <Link to='/signup'>
-                    <button className="rounded-md bg-white px-3 py-1 font-semibold text-[#352F2F] shadow-lg transition-all duration-300 hover:scale-105 hover:bg-gray-200">
+                    <button className="rounded-md cursor-pointer bg-white px-3 py-1 font-semibold text-[#352F2F] shadow-lg transition-all duration-300 hover:scale-105 hover:bg-gray-200">
                       Sign In
                     </button></Link>
         
                     <Link to="/login">
-                    <button className="rounded-md border border-white bg-white/10 px-3 py-1 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white hover:text-[#352F2F]">
+                    <button className="rounded-md border cursor-pointer border-white bg-white/10 px-3 py-1 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white hover:text-[#352F2F]">
                       Login
                     </button>
                     </Link>
