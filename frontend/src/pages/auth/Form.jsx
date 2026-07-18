@@ -32,7 +32,7 @@ const Form = ({name,onEvent}) => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault
+    e.preventDefault()
     onEvent(data)
   }
   return (
